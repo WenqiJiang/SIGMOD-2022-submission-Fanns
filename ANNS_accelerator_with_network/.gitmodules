@@ -1,0 +1,4 @@
+[submodule "fpga-network-stack"]
+	path = fpga-network-stack
+	url = git@gitlab.inf.ethz.ch:OU-SYSTEMS/fpga-network-stack.git
+	branch = vitis
