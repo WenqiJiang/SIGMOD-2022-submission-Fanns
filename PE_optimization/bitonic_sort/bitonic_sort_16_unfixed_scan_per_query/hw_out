@@ -1,0 +1,47 @@
+Found Platform
+Platform Name: Xilinx
+Finished getting device...
+Finished creating context...
+Finished creating command queue...
+INFO: Reading ./xclbin/vadd.hw.xclbin
+Loading: './xclbin/vadd.hw.xclbin'
+Finished loading binary...
+Finished creating program...
+Finished creating kernel...
+Start to allocate device memory...
+Starting copy from Host to device...
+Host to device finished...
+Comparing Results...
+i = 0	dist = -9208	cell_ID = 23
+i = 1	dist = -7029	cell_ID = 19
+i = 2	dist = -6878	cell_ID = 14
+i = 3	dist = -6471	cell_ID = 3
+i = 4	dist = -5983	cell_ID = 10
+i = 5	dist = -4912	cell_ID = 27
+i = 6	dist = -4604	cell_ID = 13
+i = 7	dist = -3117	cell_ID = 16
+i = 8	dist = -3024	cell_ID = 0
+i = 9	dist = -1940	cell_ID = 12
+i = 10	dist = -1526	cell_ID = 15
+i = 11	dist = -1048	cell_ID = 22
+i = 12	dist = -83	cell_ID = 4
+i = 13	dist = -33	cell_ID = 6
+i = 14	dist = 1112	cell_ID = 8
+i = 15	dist = 1732	cell_ID = 17
+i = 16	dist = 2461	cell_ID = 2
+i = 17	dist = 3114	cell_ID = 9
+i = 18	dist = 3877	cell_ID = 31
+i = 19	dist = 4929	cell_ID = 7
+i = 20	dist = 5649	cell_ID = 11
+i = 21	dist = 7024	cell_ID = 28
+i = 22	dist = 7232	cell_ID = 25
+i = 23	dist = 7612	cell_ID = 21
+i = 24	dist = 7636	cell_ID = 29
+i = 25	dist = 7642	cell_ID = 1
+i = 26	dist = 8536	cell_ID = 26
+i = 27	dist = 8758	cell_ID = 5
+i = 28	dist = 9032	cell_ID = 30
+i = 29	dist = 9219	cell_ID = 18
+i = 30	dist = 9277	cell_ID = 20
+i = 31	dist = 9970	cell_ID = 24
+TEST PASSED

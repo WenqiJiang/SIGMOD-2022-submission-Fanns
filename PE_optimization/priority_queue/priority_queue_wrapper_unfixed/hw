@@ -1,0 +1,17 @@
+./host ./xclbin/vadd.hw.xclbin
+XRT build version: 2.3.1301
+Build hash: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Build date: 2019-10-24 20:05:16
+Git branch: 2019.2
+PID: 55359
+UID: 522663
+[Wed Mar 24 21:06:55 2021]
+HOST: alveo0
+EXE: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/priority_queue/priority_queue_wrapper_unfixed/host
+[XRT] WARNING: No devices found
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+src/host.hpp:45 Error calling err = cl::Platform::get(&platforms), error code is: -1001
+Makefile:122: recipe for target 'check' failed
+make: *** [check] Error 1

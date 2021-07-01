@@ -1,0 +1,134 @@
+mkdir -p ./xclbin
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t sw_emu --config design.cfg --save-temps --report estimate --temp_dir ./_x.sw_emu/vadd -c -k vadd -I'src' -o'xclbin/vadd.sw_emu.xo' 'src/vadd.cpp'  #--from_step vpl.impl.phys_opt_design
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/vadd.sw_emu
+	Log files: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/logs/vadd.sw_emu
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port:35203
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/xclbin/vadd.sw_emu.xo.compile_summary, at Thu Mar 18 12:39:58 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Mar 18 12:39:58 2021
+Running Rule Check Server on port:36893
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/vadd.sw_emu/v++_compile_vadd.sw_emu_guidance.html', at Thu Mar 18 12:39:59 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for software emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 140 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/vadd.sw_emu/vadd/vivado_hls.log :
+INFO: [v++ 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining loop 'Loop 2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining function 'load_input_stream<16>'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [v++ 204-61] Pipelining function 'bitonic_compare_swap_merged'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+INFO: [v++ 204-61] Pipelining function 'write_output_stream<16>'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining loop 'Loop 2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 191.79 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/vadd.sw_emu/system_estimate_vadd.sw_emu.xtxt
+Add Instance bitonic_sort_16_10000_10000_s bitonic_sort_16_10000_10000_U0 664
+Add Instance dataflow_parent_loop_proc dataflow_parent_loop_proc_U0 173
+Add Instance dataflow_in_loop dataflow_in_loop_U0 173
+Add Instance bitonic_compare_swap_merged bitonic_compare_swap_merged_U0 154
+Add Instance load_input_stream_16_s load_input_stream_16_U0 190
+Add Instance write_output_stream_16_s write_output_stream_16_U0 258
+Add Instance write_result_10000_10000_s write_result_10000_10000_U0 732
+Add Instance dummy_input_sender_10000_10000_5 dummy_input_sender_10000_10000_5_U0 771
+INFO: [v++ 60-586] Created xclbin/vadd.sw_emu.xo
+INFO: [v++ 60-791] Total elapsed time: 0h 4m 47s
+mkdir -p ./xclbin
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t sw_emu --config design.cfg --save-temps --report estimate --temp_dir ./_x.sw_emu/vadd -l --profile_kernel data:all:all:all:all -o'xclbin/vadd.sw_emu.xclbin' xclbin/vadd.sw_emu.xo  #--from_step vpl.impl.phys_opt_design
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/link
+	Log files: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/logs/link
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port:41687
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/xclbin/vadd.sw_emu.xclbin.link_summary, at Thu Mar 18 12:44:45 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Mar 18 12:44:45 2021
+Running Rule Check Server on port:39831
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/link/v++_link_vadd.sw_emu_guidance.html', at Thu Mar 18 12:44:46 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for software emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-645] kernel flags are '-g -I /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/src -g'
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/link/system_estimate_vadd.sw_emu.xtxt
+INFO: [v++ 60-586] Created xclbin/vadd.sw_emu.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/reports/link/v++_link_vadd.sw_emu_guidance.html
+	Steps Log File: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/bitonic_sort/bitonic_sort_16_fixed_scan_per_query/_x.sw_emu/vadd/logs/link/link.steps.log
+
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 12s
+cp -rf ./xclbin/emconfig.json .
+XCL_EMULATION_MODE=sw_emu ./host ./xclbin/vadd.sw_emu.xclbin
+Found Platform
+Platform Name: Xilinx
+Finished getting device...
+Finished creating context...
+Finished creating command queue...
+INFO: Reading ./xclbin/vadd.sw_emu.xclbin
+Loading: './xclbin/vadd.sw_emu.xclbin'
+Finished loading binary...
+Finished creating program...
+Finished creating kernel...
+Start to allocate device memory...
+Starting copy from Host to device...
+Host to device finished...
+Comparing Results...
+i = 0	dist = -883	cell_ID = 1
+i = 1	dist = -781	cell_ID = 8
+i = 2	dist = -762	cell_ID = 15
+i = 3	dist = -731	cell_ID = 2
+i = 4	dist = -530	cell_ID = 7
+i = 5	dist = -435	cell_ID = 9
+i = 6	dist = -434	cell_ID = 10
+i = 7	dist = -353	cell_ID = 0
+i = 8	dist = -101	cell_ID = 5
+i = 9	dist = 336	cell_ID = 6
+i = 10	dist = 469	cell_ID = 13
+i = 11	dist = 495	cell_ID = 12
+i = 12	dist = 511	cell_ID = 11
+i = 13	dist = 593	cell_ID = 3
+i = 14	dist = 732	cell_ID = 14
+i = 15	dist = 768	cell_ID = 4
+i = 16	dist = 0	cell_ID = 0
+i = 17	dist = 1.68296e-42	cell_ID = 0
+i = 18	dist = -6.54731e+09	cell_ID = 32513
+i = 19	dist = 9.31726e-26	cell_ID = 21921
+i = 20	dist = -7.67524e+09	cell_ID = 32513
+i = 21	dist = 9.31822e-26	cell_ID = 21921
+i = 22	dist = 9.3165e-26	cell_ID = 21921
+i = 23	dist = 9.31748e-26	cell_ID = 21921
+i = 24	dist = 0	cell_ID = 0
+i = 25	dist = 9.31819e-26	cell_ID = 21921
+i = 26	dist = 0	cell_ID = 0
+i = 27	dist = -7.67524e+09	cell_ID = 32513
+i = 28	dist = -7.67537e+09	cell_ID = 32513
+i = 29	dist = -7.67536e+09	cell_ID = 32513
+i = 30	dist = -7.67531e+09	cell_ID = 32513
+i = 31	dist = -7.67533e+09	cell_ID = 32513
+TEST PASSED

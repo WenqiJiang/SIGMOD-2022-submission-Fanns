@@ -1,0 +1,24 @@
+mkdir -p ./xclbin
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -c -k vadd -I'src' -o'xclbin/vadd.hw.xo' 'src/vadd.cpp'  --jobs 32 #--from_step vpl.impl.phys_opt_design
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/distance_estimation_by_LUT/distance_estimation_by_LUT_wrapper_with_init_unoptimized/_x.hw/vadd/reports/vadd.hw
+	Log files: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/distance_estimation_by_LUT/distance_estimation_by_LUT_wrapper_with_init_unoptimized/_x.hw/vadd/logs/vadd.hw
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port:34733
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/distance_estimation_by_LUT/distance_estimation_by_LUT_wrapper_with_init_unoptimized/xclbin/vadd.hw.xo.compile_summary, at Fri Mar 19 20:01:51 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Mar 19 20:01:51 2021
+Running Rule Check Server on port:45223
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/distance_estimation_by_LUT/distance_estimation_by_LUT_wrapper_with_init_unoptimized/_x.hw/vadd/reports/vadd.hw/v++_compile_vadd.hw_guidance.html', at Fri Mar 19 20:01:52 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 140 MHz
+Makefile:90: recipe for target 'xclbin/vadd.hw.xo' failed

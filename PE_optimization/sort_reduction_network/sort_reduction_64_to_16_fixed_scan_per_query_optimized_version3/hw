@@ -1,0 +1,501 @@
+mkdir -p ./xclbin
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -c -k vadd -I'src' -o'xclbin/vadd.hw.xo' 'src/vadd.cpp'  #--from_step vpl.impl.phys_opt_design
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/vadd.hw
+	Log files: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/logs/vadd.hw
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port:36699
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/xclbin/vadd.hw.xo.compile_summary, at Fri Mar 19 11:24:59 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Mar 19 11:24:59 2021
+Running Rule Check Server on port:44937
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/vadd.hw/v++_compile_vadd.hw_guidance.html', at Fri Mar 19 11:25:00 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'vadd'
+INFO: [v++ 60-1616] Creating a HLS clock using kernel_frequency option: 140 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vadd Log file: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/vadd.hw/vadd/vivado_hls.log :
+INFO: [v++ 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [v++ 204-61] Pipelining loop 'Loop 2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 22.
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 204-61] Pipelining loop 'Loop 2'.
+INFO: [v++ 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 191.79 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/vadd.hw/system_estimate_vadd.hw.xtxt
+Add Instance sort_and_reduction_10000_10000_s sort_and_reduction_10000_10000_U0 1240
+Add Instance dummy_input_sender_10000_10000_5 dummy_input_sender_10000_10000_5_U0 1404
+Add Instance write_result_10000_10000_s write_result_10000_10000_U0 1541
+INFO: [v++ 60-586] Created xclbin/vadd.hw.xo
+INFO: [v++ 60-791] Total elapsed time: 0h 7m 50s
+mkdir -p ./xclbin
+/opt/Xilinx/Vitis/2019.2/bin/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -l --profile_kernel data:all:all:all:all -o'xclbin/vadd.hw.xclbin' xclbin/vadd.hw.xo  #--from_step vpl.impl.phys_opt_design
+Option Map File Used: '/opt/Xilinx/Vitis/2019.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link
+	Log files: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/logs/link
+WARNING: [v++ 60-1216] --report/-r option has been deprecated. Please use --report_level/-R estimate to generate an estimate report file for software emulation
+Running Dispatch Server on port:43181
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/xclbin/vadd.hw.xclbin.link_summary, at Fri Mar 19 11:32:49 2021
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Mar 19 11:32:49 2021
+Running Rule Check Server on port:46173
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link/v++_link_vadd.hw_guidance.html', at Fri Mar 19 11:32:50 2021
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [11:32:58] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/xclbin/vadd.hw.xo -keep --config /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --target hw --output_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int --temp_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Fri Mar 19 11:33:04 2021
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/xclbin/vadd.hw.xo
+INFO: [KernelCheck 83-118] 'vadd' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM0' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM1' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM2' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM3' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM4' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM5' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM6' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM7' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM8' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM9' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM10' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM11' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM12' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM13' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM14' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM15' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM16' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM17' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM18' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM19' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM20' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM21' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM22' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM23' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM24' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM25' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM26' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM27' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM28' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM29' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM30' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_HBM31' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_DDR0' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'table_DDR1' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'out_PLRAM' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-53] Creating IP database /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [11:33:05] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/xilinx_u280_xdma_201920_3.hpfm -clkid 0 -ip /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [11:33:12] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 71169 ; free virtual = 401717
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [11:33:12] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -nk vadd:1:vadd_1 -sp vadd_1.table_HBM0:HBM[0] -sp vadd_1.table_HBM1:HBM[1] -sp vadd_1.table_HBM2:HBM[2] -sp vadd_1.table_HBM3:HBM[3] -sp vadd_1.table_HBM4:HBM[4] -sp vadd_1.table_HBM5:HBM[5] -sp vadd_1.table_HBM6:HBM[6] -sp vadd_1.table_HBM7:HBM[7] -sp vadd_1.table_HBM8:HBM[8] -sp vadd_1.table_HBM9:HBM[9] -sp vadd_1.table_HBM10:HBM[10] -sp vadd_1.table_HBM11:HBM[11] -sp vadd_1.table_HBM12:HBM[12] -sp vadd_1.table_HBM13:HBM[13] -sp vadd_1.table_HBM14:HBM[14] -sp vadd_1.table_HBM15:HBM[15] -sp vadd_1.table_HBM16:HBM[16] -sp vadd_1.table_HBM17:HBM[17] -sp vadd_1.table_HBM18:HBM[18] -sp vadd_1.table_HBM19:HBM[19] -sp vadd_1.table_HBM20:HBM[20] -sp vadd_1.table_HBM21:HBM[21] -sp vadd_1.table_HBM22:HBM[22] -sp vadd_1.table_HBM23:HBM[23] -sp vadd_1.table_HBM24:HBM[24] -sp vadd_1.table_HBM25:HBM[25] -sp vadd_1.table_HBM26:HBM[26] -sp vadd_1.table_HBM27:HBM[27] -sp vadd_1.table_HBM28:HBM[28] -sp vadd_1.table_HBM29:HBM[29] -sp vadd_1.table_HBM30:HBM[30] -sp vadd_1.table_HBM31:HBM[31] -sp vadd_1.table_DDR0:DDR[0] -sp vadd_1.table_DDR1:DDR[1] -sp vadd_1.out_PLRAM:PLRAM[0] -dmclkid 0 -r /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 1  {vadd_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM0, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM1, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM2, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM3, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM4, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM5, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM6, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM7, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM8, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM9, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM10, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM11, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM12, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM13, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM14, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM15, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM16, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM17, sptag: HBM[17]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM18, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM19, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM20, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM21, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM22, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM23, sptag: HBM[23]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM24, sptag: HBM[24]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM25, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM26, sptag: HBM[26]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM27, sptag: HBM[27]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM28, sptag: HBM[28]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM29, sptag: HBM[29]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM30, sptag: HBM[30]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_HBM31, sptag: HBM[31]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR0, sptag: DDR[0]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: table_DDR1, sptag: DDR[1]
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: out_PLRAM, sptag: PLRAM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM0 to HBM[0] for directive vadd_1.table_HBM0:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM1 to HBM[1] for directive vadd_1.table_HBM1:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM2 to HBM[2] for directive vadd_1.table_HBM2:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM3 to HBM[3] for directive vadd_1.table_HBM3:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM4 to HBM[4] for directive vadd_1.table_HBM4:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM5 to HBM[5] for directive vadd_1.table_HBM5:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM6 to HBM[6] for directive vadd_1.table_HBM6:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM7 to HBM[7] for directive vadd_1.table_HBM7:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM8 to HBM[8] for directive vadd_1.table_HBM8:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM9 to HBM[9] for directive vadd_1.table_HBM9:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM10 to HBM[10] for directive vadd_1.table_HBM10:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM11 to HBM[11] for directive vadd_1.table_HBM11:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM12 to HBM[12] for directive vadd_1.table_HBM12:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM13 to HBM[13] for directive vadd_1.table_HBM13:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM14 to HBM[14] for directive vadd_1.table_HBM14:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM15 to HBM[15] for directive vadd_1.table_HBM15:HBM[15]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM16 to HBM[16] for directive vadd_1.table_HBM16:HBM[16]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM17 to HBM[17] for directive vadd_1.table_HBM17:HBM[17]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM18 to HBM[18] for directive vadd_1.table_HBM18:HBM[18]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM19 to HBM[19] for directive vadd_1.table_HBM19:HBM[19]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM20 to HBM[20] for directive vadd_1.table_HBM20:HBM[20]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM21 to HBM[21] for directive vadd_1.table_HBM21:HBM[21]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM22 to HBM[22] for directive vadd_1.table_HBM22:HBM[22]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM23 to HBM[23] for directive vadd_1.table_HBM23:HBM[23]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM24 to HBM[24] for directive vadd_1.table_HBM24:HBM[24]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM25 to HBM[25] for directive vadd_1.table_HBM25:HBM[25]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM26 to HBM[26] for directive vadd_1.table_HBM26:HBM[26]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM27 to HBM[27] for directive vadd_1.table_HBM27:HBM[27]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM28 to HBM[28] for directive vadd_1.table_HBM28:HBM[28]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM29 to HBM[29] for directive vadd_1.table_HBM29:HBM[29]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM30 to HBM[30] for directive vadd_1.table_HBM30:HBM[30]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_HBM31 to HBM[31] for directive vadd_1.table_HBM31:HBM[31]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_DDR0 to DDR[0] for directive vadd_1.table_DDR0:DDR[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.table_DDR1 to DDR[1] for directive vadd_1.table_DDR1:DDR[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.out_PLRAM to PLRAM[0] for directive vadd_1.out_PLRAM:PLRAM[0]
+INFO: [SYSTEM_LINK 82-37] [11:33:18] cfgen finished successfully
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 71140 ; free virtual = 401708
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [11:33:18] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.xsd --temp_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link --output_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [11:33:22] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 295.461 ; gain = 0.000 ; free physical = 71125 ; free virtual = 401699
+INFO: [v++ 60-1441] [11:33:22] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 71143 ; free virtual = 401718
+INFO: [v++ 60-1443] [11:33:22] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/sdsl.dat -rtd /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/cf2sw.rtd -xclbin /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/xclbin_orig.xml -o /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-1441] [11:33:26] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 71136 ; free virtual = 401710
+INFO: [v++ 60-1443] [11:33:26] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/cf2sw.rtd --diagramJsonFileName /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ -t hw --config design.cfg --save-temps --report estimate --temp_dir ./_x.hw/vadd -l --profile_kernel data:all:all:all:all -oxclbin/vadd.hw.xclbin xclbin/vadd.hw.xo  --generatedByXclbinName vadd.hw --kernelInfoDataFileName /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/kernel_info.dat'.
+WARNING: [v++ 82-158] Unable to populate kernel available resources DSP entry.
+INFO: [v++ 60-1441] [11:33:27] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 71136 ; free virtual = 401711
+INFO: [v++ 60-1443] [11:33:27] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_xdma_201920_3 -g --kernel_frequency 140 --profile_kernel data:all:all:all:all -s --output_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int --log_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/logs/link --report_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link --config /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vplConfig.ini -k /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link --no-info --tlog_dir /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/.tlog/v++_link_vadd.hw --iprepo /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link/vpl.pb /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u280_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/vivado/vpl/.local/hw_platform
+[11:34:34] Run vpl: Step create_project: Started
+Creating Vivado project.
+[11:34:37] Run vpl: Step create_project: Completed
+[11:34:37] Run vpl: Step create_bd: Started
+[11:36:10] Run vpl: Step create_bd: RUNNING...
+[11:37:56] Run vpl: Step create_bd: RUNNING...
+[11:39:41] Run vpl: Step create_bd: RUNNING...
+[11:41:41] Run vpl: Step create_bd: RUNNING...
+[11:43:22] Run vpl: Step create_bd: RUNNING...
+[11:45:13] Run vpl: Step create_bd: RUNNING...
+[11:46:55] Run vpl: Step create_bd: RUNNING...
+[11:47:33] Run vpl: Step create_bd: Completed
+[11:47:33] Run vpl: Step update_bd: Started
+[11:49:17] Run vpl: Step update_bd: RUNNING...
+[11:51:05] Run vpl: Step update_bd: RUNNING...
+[11:52:02] Run vpl: Step update_bd: Completed
+[11:52:02] Run vpl: Step generate_target: Started
+[11:53:50] Run vpl: Step generate_target: RUNNING...
+[11:55:36] Run vpl: Step generate_target: RUNNING...
+[11:57:12] Run vpl: Step generate_target: RUNNING...
+[11:59:01] Run vpl: Step generate_target: RUNNING...
+[12:00:37] Run vpl: Step generate_target: RUNNING...
+[12:02:27] Run vpl: Step generate_target: RUNNING...
+[12:04:12] Run vpl: Step generate_target: RUNNING...
+[12:05:23] Run vpl: Step generate_target: Completed
+[12:05:23] Run vpl: Step config_hw_runs: Started
+[12:06:58] Run vpl: Step config_hw_runs: Completed
+[12:06:58] Run vpl: Step synth: Started
+[12:08:13] Block-level synthesis in progress, 0 of 84 jobs complete, 8 jobs running.
+[12:09:31] Block-level synthesis in progress, 0 of 84 jobs complete, 8 jobs running.
+[12:10:53] Block-level synthesis in progress, 3 of 84 jobs complete, 6 jobs running.
+[12:12:21] Block-level synthesis in progress, 4 of 84 jobs complete, 7 jobs running.
+[12:13:48] Block-level synthesis in progress, 10 of 84 jobs complete, 8 jobs running.
+[12:15:10] Block-level synthesis in progress, 12 of 84 jobs complete, 7 jobs running.
+[12:16:31] Block-level synthesis in progress, 17 of 84 jobs complete, 7 jobs running.
+[12:18:08] Block-level synthesis in progress, 23 of 84 jobs complete, 5 jobs running.
+[12:20:32] Block-level synthesis in progress, 26 of 84 jobs complete, 8 jobs running.
+[12:22:08] Block-level synthesis in progress, 31 of 84 jobs complete, 5 jobs running.
+[12:23:45] Block-level synthesis in progress, 35 of 84 jobs complete, 7 jobs running.
+[12:26:01] Block-level synthesis in progress, 41 of 84 jobs complete, 8 jobs running.
+[12:27:21] Block-level synthesis in progress, 43 of 84 jobs complete, 7 jobs running.
+[12:28:53] Block-level synthesis in progress, 49 of 84 jobs complete, 8 jobs running.
+[12:30:39] Block-level synthesis in progress, 55 of 84 jobs complete, 8 jobs running.
+[12:32:59] Block-level synthesis in progress, 62 of 84 jobs complete, 2 jobs running.
+[12:34:26] Block-level synthesis in progress, 63 of 84 jobs complete, 7 jobs running.
+[12:36:02] Block-level synthesis in progress, 69 of 84 jobs complete, 8 jobs running.
+[12:37:39] Block-level synthesis in progress, 71 of 84 jobs complete, 7 jobs running.
+[12:39:09] Block-level synthesis in progress, 77 of 84 jobs complete, 7 jobs running.
+[12:40:36] Block-level synthesis in progress, 83 of 84 jobs complete, 1 job running.
+[12:42:10] Block-level synthesis in progress, 83 of 84 jobs complete, 1 job running.
+[12:43:41] Block-level synthesis in progress, 84 of 84 jobs complete, 0 jobs running.
+[12:44:52] Top-level synthesis in progress.
+[12:46:53] Top-level synthesis in progress.
+[12:48:21] Top-level synthesis in progress.
+[12:49:47] Top-level synthesis in progress.
+[12:51:13] Top-level synthesis in progress.
+[12:52:41] Top-level synthesis in progress.
+[12:54:08] Top-level synthesis in progress.
+[12:55:37] Top-level synthesis in progress.
+[12:57:04] Top-level synthesis in progress.
+[12:58:33] Top-level synthesis in progress.
+[13:00:00] Top-level synthesis in progress.
+[13:01:28] Top-level synthesis in progress.
+[13:03:01] Top-level synthesis in progress.
+[13:04:28] Top-level synthesis in progress.
+[13:05:55] Top-level synthesis in progress.
+[13:07:25] Top-level synthesis in progress.
+[13:08:57] Top-level synthesis in progress.
+[13:09:31] Run vpl: Step synth: Completed
+[13:09:31] Run vpl: Step impl: Started
+[13:30:48] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 01h 57m 17s 
+
+[13:30:48] Starting logic optimization..
+[13:32:17] Phase 1 Generate And Synthesize MIG Cores
+[13:39:20] Phase 2 Generate And Synthesize Debug Cores
+[13:42:13] Phase 3 Retarget
+[13:43:37] Phase 4 Constant propagation
+[13:44:59] Phase 5 Sweep
+[13:49:23] Phase 6 BUFG optimization
+[13:49:23] Phase 7 Shift Register Optimization
+[13:49:23] Phase 8 Post Processing Netlist
+[13:55:08] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 24m 20s 
+
+[13:55:08] Starting logic placement..
+[13:56:31] Phase 1 Placer Initialization
+[13:56:31] Phase 1.1 Placer Initialization Netlist Sorting
+[13:59:15] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[14:02:04] Phase 1.3 Build Placer Netlist Model
+[14:04:54] Phase 1.4 Constrain Clocks/Macros
+[14:04:54] Phase 2 Global Placement
+[14:04:54] Phase 2.1 Floorplanning
+[14:10:39] Phase 2.2 Global Placement Core
+[14:20:37] Phase 2.2.1 Physical Synthesis In Placer
+[14:24:48] Phase 3 Detail Placement
+[14:24:48] Phase 3.1 Commit Multi Column Macros
+[14:24:48] Phase 3.2 Commit Most Macros & LUTRAMs
+[14:26:13] Phase 3.3 Area Swap Optimization
+[14:26:13] Phase 3.4 Pipeline Register Optimization
+[14:26:13] Phase 3.5 IO Cut Optimizer
+[14:26:13] Phase 3.6 Fast Optimization
+[14:27:48] Phase 3.7 Small Shape DP
+[14:27:48] Phase 3.7.1 Small Shape Clustering
+[14:29:19] Phase 3.7.2 Flow Legalize Slice Clusters
+[14:29:19] Phase 3.7.3 Slice Area Swap
+[14:30:46] Phase 3.7.4 Commit Slice Clusters
+[14:30:46] Phase 3.8 Place Remaining
+[14:30:46] Phase 3.9 Re-assign LUT pins
+[14:32:13] Phase 3.10 Pipeline Register Optimization
+[14:32:13] Phase 3.11 Fast Optimization
+[14:33:43] Phase 4 Post Placement Optimization and Clean-Up
+[14:33:43] Phase 4.1 Post Commit Optimization
+[14:35:15] Phase 4.1.1 Post Placement Optimization
+[14:36:40] Phase 4.1.1.1 BUFG Insertion
+[14:40:47] Phase 4.1.1.2 BUFG Replication
+[14:42:09] Phase 4.1.1.3 Replication
+[14:42:09] Phase 4.2 Post Placement Cleanup
+[14:43:40] Phase 4.3 Placer Reporting
+[14:43:40] Phase 4.4 Final Placement Cleanup
+[15:00:03] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 04m 54s 
+
+[15:00:03] Starting logic routing..
+[15:01:53] Phase 1 Build RT Design
+[15:04:54] Phase 2 Router Initialization
+[15:04:54] Phase 2.1 Fix Topology Constraints
+[15:04:54] Phase 2.2 Pre Route Cleanup
+[15:04:54] Phase 2.3 Global Clock Net Routing
+[15:06:18] Phase 2.4 Update Timing
+[15:09:11] Phase 2.5 Update Timing for Bus Skew
+[15:09:11] Phase 2.5.1 Update Timing
+[15:12:00] Phase 3 Initial Routing
+[15:12:00] Phase 3.1 Global Routing
+[15:13:26] Phase 4 Rip-up And Reroute
+[15:13:26] Phase 4.1 Global Iteration 0
+[15:31:57] Phase 4.2 Global Iteration 1
+[15:33:22] Phase 4.3 Global Iteration 2
+[15:36:11] Phase 5 Delay and Skew Optimization
+[15:36:11] Phase 5.1 Delay CleanUp
+[15:36:11] Phase 5.1.1 Update Timing
+[15:37:34] Phase 5.2 Clock Skew Optimization
+[15:37:34] Phase 6 Post Hold Fix
+[15:37:34] Phase 6.1 Hold Fix Iter
+[15:37:34] Phase 6.1.1 Update Timing
+[15:39:00] Phase 6.1.2 Lut RouteThru Assignment for hold
+[15:39:00] Phase 6.2 Additional Hold Fix
+[15:41:49] Phase 7 Route finalize
+[15:41:49] Phase 8 Verifying routed nets
+[15:41:49] Phase 9 Depositing Routes
+[15:43:13] Phase 10 Route finalize
+[15:43:13] Phase 11 Post Router Timing
+[15:46:05] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 46m 02s 
+
+[15:46:05] Starting bitstream generation..
+Starting optional post-route physical design optimization.
+[15:53:20] Phase 1 Physical Synthesis Initialization
+[15:56:08] Phase 2 SLL Register Hold Fix Optimization
+[15:56:08] Phase 3 Critical Path Optimization
+[15:56:08] Phase 4 Hold Fix Optimization
+Finished optional post-route physical design optimization.
+[16:14:33] Creating bitmap...
+[16:20:09] Writing bitstream ./pfm_top_i_dynamic_region_my_rm_partial.bit...
+[16:20:09] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 34m 04s 
+[16:19:54] Run vpl: Step impl: Completed
+[16:20:17] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [16:21:00] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:05:24 ; elapsed = 04:47:31 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 87358 ; free virtual = 430959
+INFO: [v++ 60-1443] [16:21:00] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' (clock ID '') is being mapped to clock name 'clk_out1_pfm_top_clkwiz_hbm_aclk_0' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: clk_out1_pfm_top_clkwiz_hbm_aclk_0 = 450, Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 140, Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500
+INFO: [v++ 60-1453] Command Line: cf2sw -a /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/address_map.xml -sdsl /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/sdsl.dat -xclbin /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/xclbin_orig.xml -rtd /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.rtd -o /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xml
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [16:21:05] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 87347 ; free virtual = 430949
+INFO: [v++ 60-1443] [16:21:05] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.rtd --append-section :JSON:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw_xml.rtd --add-section BUILD_METADATA:JSON:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xml --add-section SYSTEM_METADATA:RAW:/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/systemDiagramModelSlrBaseAddress.json --output /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+XRT Build Version: 2.3.1301
+       Build Date: 2019-10-24 20:05:16
+          Hash ID: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 5624 bytes
+Format : JSON
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 59688575 bytes
+Format : RAW
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 12018 bytes
+Format : JSON
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 17711 bytes
+Format : RAW
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 35947 bytes
+Format : RAW
+File   : '/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (59796582 bytes) to the output file: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [16:21:06] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.31 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 87294 ; free virtual = 430953
+INFO: [v++ 60-1443] [16:21:06] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --info /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xclbin.info --input /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/int/vadd.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/link/run_link
+INFO: [v++ 60-1441] [16:21:06] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.46 . Memory (MB): peak = 679.324 ; gain = 0.000 ; free physical = 87295 ; free virtual = 430955
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link/system_estimate_vadd.hw.xtxt
+INFO: [v++ 60-586] Created /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/xclbin/vadd.hw.ltx
+INFO: [v++ 60-586] Created xclbin/vadd.hw.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link/v++_link_vadd.hw_guidance.html
+	Timing Report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link/imp/xilinx_u280_xdma_201920_3_bb_locked_timing_summary_routed.rpt
+	Utilizations Report: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/reports/link/imp/kernel_util_routed.rpt
+	Vivado Log: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/logs/link/vivado.log
+	Steps Log File: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/_x.hw/vadd/logs/link/link.steps.log
+
+INFO: [v++ 60-791] Total elapsed time: 4h 48m 18s
+emconfigutil --platform xilinx_u280_xdma_201920_3 --od ./xclbin
+
+****** configutil v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [ConfigUtil 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_xdma_201920_3/xilinx_u280_xdma_201920_3.xpfm
+INFO: [ConfigUtil 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_xdma_201920_3/hw/xilinx_u280_xdma_201920_3.xsa'
+emulation configuration file `emconfig.json` is created in ./xclbin directory 
+./host ./xclbin/vadd.hw.xclbin
+XRT build version: 2.3.1301
+Build hash: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Build date: 2019-10-24 20:05:16
+Git branch: 2019.2
+PID: 42796
+UID: 522663
+[Fri Mar 19 16:21:34 2021]
+HOST: alveo0
+EXE: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_fixed_scan_per_query_optimized_version3/host
+[XRT] WARNING: No devices found
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+src/host.hpp:45 Error calling err = cl::Platform::get(&platforms), error code is: -1001
+Makefile:122: recipe for target 'check' failed
+make: *** [check] Error 1

@@ -1,0 +1,38 @@
+wejiang   1739  0.0  0.0 236272  2200 pts/9    Sl+  Apr13   1:35 /home/wejiang/anaconda3/envs/py37/bin/python /home/wejiang/anaconda3/envs/py37/bin/jupyter-notebook --no-browser --port=8888
+wejiang   2101  0.0  0.0 520956     0 ?        Ssl  Apr13   0:08 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-0875f814-4b7f-4b22-aa04-13e07a464fee.json
+wejiang   3056  0.0  0.0 520956  1704 ?        Ssl  Apr13   0:07 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-295fe7e2-2003-4b81-85c4-59ac0ef446b9.json
+wejiang   3407  0.0  0.0 520956  3736 ?        Ssl  Apr13   0:08 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-d8cc1713-1608-4602-a4bc-bae532d50549.json
+wejiang   3485  0.0  0.0 521212  3808 ?        Ssl  Apr13   0:08 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-8e3c70a7-b271-46fd-8d2a-f0dba4643119.json
+wejiang   4256  0.0  0.0  28212     8 ?        Ss   Mar25   0:00 SCREEN -S build
+wejiang   4257  0.0  0.0  13496     8 pts/1    Ss+  Mar25   0:00 /bin/bash
+wejiang   4298  0.0  0.0  28176     0 ?        Ss   Mar25   0:00 SCREEN -S build2
+wejiang   4299  0.0  0.0  13596     8 pts/2    Ss+  Mar25   0:00 /bin/bash
+wejiang   4334  0.0  0.0  28212  1776 ?        Ss   Mar25   0:00 SCREEN -S build3
+wejiang   4335  0.0  0.0  13496  2396 pts/3    Ss   Mar25   0:00 /bin/bash
+wejiang   4388  0.0  0.0  28188   700 ?        Ss   Mar25   0:00 SCREEN -S build4
+wejiang   4389  0.0  0.0  13496    92 pts/4    Ss+  Mar25   0:00 /bin/bash
+wejiang   4458  0.0  0.0  28080     4 ?        Ss   Mar25   0:00 SCREEN -S build5
+wejiang   4459  0.0  0.0  13496     8 pts/5    Ss+  Mar25   0:00 /bin/bash
+wejiang  18794  0.4  0.0 166410356 4072 ?      Ssl  Apr13   7:50 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-a9fb7174-fb15-43c8-9b9f-a0d8770316ac.json
+root     20205  0.0  0.0  97832     4 ?        Ss   14:44   0:00 sshd: wejiang [priv]
+wejiang  20217  0.0  0.0  97832     4 ?        S    14:44   0:00 sshd: wejiang@pts/20
+wejiang  20225  0.0  0.0  14412     8 pts/20   Ss   14:44   0:00 -bash
+wejiang  20358  0.2  0.0   9064  1276 pts/20   D+   14:44   0:15 rm -rf ./234 ./2342342 ./23432 ./4567869 ./4657897 ./4675 ./567 ./56786 ./5679870 ./5768790 ./57689 ./57698 ./687 ./6879 ./6987 ./8888 ./89 ./891 ./_x.hw ./_x.hw_emu ./_x.sw_emu ./debug_single_lookup_table_construction_PE_optimized_version2 ./entire-node-systolic-computation-double-buffer-without-FIFO-type-assignment-outdated ./entire-node-systolic-computation-without-FIFO-type-assignment-new-bit-parser ./multiple_lookup_table_construction_PEs
+wejiang  22773  0.0  0.0 145440580 8192 ?      Ssl  Apr13   0:38 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-db4ce1cf-a11b-4913-a8a8-31f27193a72f.json
+root     32899  0.0  0.0  97828     4 ?        Ss   09:39   0:00 sshd: wejiang [priv]
+wejiang  32911  0.0  0.0  97948   388 ?        S    09:39   0:00 sshd: wejiang@pts/6
+wejiang  32916  0.0  0.0  14412  1960 pts/6    Ss   09:39   0:00 -bash
+root     32965  0.0  0.0  97832     4 ?        Ss   09:39   0:00 sshd: wejiang [priv]
+wejiang  32979  0.0  0.0  97832   408 ?        S    09:39   0:00 sshd: wejiang@pts/7
+wejiang  32985  0.0  0.0  14412   496 pts/7    Ss   09:39   0:00 -bash
+wejiang  34119  1.4  0.0  19352  1584 pts/18   S+   15:15   1:05 htop
+wejiang  42827  0.0  0.0  28080     4 ?        Ss   Mar29   0:00 SCREEN -S jupyter
+wejiang  42828  0.0  0.0  13496     8 pts/9    Ss   Mar29   0:00 /bin/bash
+wejiang  43977 42.3  0.0 7090576  184 ?        Ssl  Apr13 750:50 /home/wejiang/anaconda3/envs/py37/bin/python -m ipykernel_launcher -f /home/wejiang/.local/share/jupyter/runtime/kernel-bf46d716-7a35-45f0-8480-f23615c5794a.json
+root     49154  0.0  0.0  97828     4 ?        Ss   12:40   0:00 sshd: wejiang [priv]
+wejiang  49169  0.0  0.0  97944    96 ?        S    12:40   0:00 sshd: wejiang@pts/18
+wejiang  49176  0.0  0.0  14412   212 pts/18   Ss   12:40   0:00 -bash
+wejiang  74586  0.0  0.0  27408   244 pts/7    S+   16:26   0:00 screen -r build4
+wejiang  75722  0.0  0.0  27408  2700 pts/6    S+   16:29   0:00 screen -r build3
+wejiang  77720  0.0  0.0  29136  1452 pts/3    R+   16:34   0:00 ps aux
+wejiang  77721  0.0  0.0  13496  1864 pts/3    D+   16:34   0:00 /bin/bash

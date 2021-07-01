@@ -1,0 +1,453 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 36411
+License: Customer
+
+Current time: 	Wed Mar 24 10:10:31 CET 2021
+Time zone: 	Central European Standard Time (Europe/Zurich)
+
+OS: Ubuntu
+OS Version: 4.14.156-U
+OS Architecture: amd64
+Available processors (cores): 80
+
+Display: localhost:15.0
+Screen size: 1440x878
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	wejiang
+User home directory: /home/wejiang
+User working directory: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2019.2
+RDI_DATADIR: /opt/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/wejiang/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/wejiang/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/wejiang/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/vivado.log
+Vivado journal file location: 	/mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-36411-alveo0
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: /opt/Xilinx/Xilinx.lic
+XILINX_DSP: /opt/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2019.2
+XILINX_SDK: /opt/Xilinx/Vitis/2019.2
+XILINX_VITIS: /opt/Xilinx/Vitis/2019.2
+XILINX_VIVADO: /opt/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2019.2
+XILINX_XRT: /opt/xilinx/xrt
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,073 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 110 MB (+112715kb) [00:00:27]
+// [Engine Memory]: 1,071 MB (+971028kb) [00:00:27]
+// bB (cr):  Open Checkpoint : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  7686 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,083 MB. GUI used memory: 44 MB. Current time: 3/24/21, 10:10:32 AM CET
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_checkpoint /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper_routed.dcp 
+// Tcl Message: Command: open_checkpoint /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper_routed.dcp  Starting open_checkpoint Task  Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 6697.344 ; gain = 0.000 ; free physical = 166960 ; free virtual = 411022 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,176 MB (+54739kb) [00:00:42]
+// WARNING: HEventQueue.dispatchEvent() is taking  11589 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,251 MB. GUI used memory: 48 MB. Current time: 3/24/21, 10:10:47 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,405 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:11:21 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,532 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:11:37 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,981 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:11:57 AM CET
+// [Engine Memory]: 3,066 MB (+1919404kb) [00:02:03]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,318 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:12:11 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,710 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:12:31 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,056 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:12:46 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,305 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:13:01 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,543 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:13:22 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,870 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:13:37 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,148 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:13:57 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,520 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:14:27 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 7,229 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:14:41 AM CET
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: SIGNAL_INTERFACE_ADD
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_INTERFACE_ADD
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 8,838 MB. GUI used memory: 48 MB. Current time: 3/24/21, 10:15:52 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 9,404 MB. GUI used memory: 47 MB. Current time: 3/24/21, 10:16:11 AM CET
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 9,530 MB (+6617973kb) [00:06:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 9,530 MB. GUI used memory: 48 MB. Current time: 3/24/21, 10:16:47 AM CET
+// [GUI Memory]: 117 MB (+1584kb) [00:06:53]
+// [GUI Memory]: 141 MB (+19217kb) [00:06:53]
+// [GUI Memory]: 166 MB (+18592kb) [00:06:54]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /opt/Xilinx/Vivado/2019.2/data/parts/xilinx/virtexuplusHBM/devint/virtexuplusHBM/xcu280/xcu280.xgd; ZipEntry: xcu280_detail.xgd elapsed time: 1.9s
+// [GUI Memory]: 218 MB (+46169kb) [00:06:54]
+// [Engine Memory]: 10,017 MB (+10416kb) [00:06:59]
+// [GUI Memory]: 231 MB (+1921kb) [00:07:00]
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  8784 ms.
+// Tcl Message: INFO: [Device 21-403] Loading part xcu280-fsvh2892-2L-e 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 10171.695 ; gain = 104.477 ; free physical = 163184 ; free virtual = 407391 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 16983 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES. INFO: [Constraints 18-4421] A LAGUNA range, without usable sites, was added to DERIVED_RANGES for purposes of keeping the Programmable Unit together within the reconfigurable pblock. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 15140.738 ; gain = 966.836 ; free physical = 158078 ; free virtual = 402492 
+// Tcl Message: Restored from archive | CPU: 34.940000 secs | Memory: 735.610794 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 15140.738 ; gain = 966.836 ; free physical = 158086 ; free virtual = 402500 Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.16 . Memory (MB): peak = 15140.738 ; gain = 0.000 ; free physical = 158187 ; free virtual = 402603 
+// TclEventType: CURR_DESIGN_SET
+// WARNING: HEventQueue.dispatchEvent() is taking  1118 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4713 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2491 ms.
+// Tcl Message: INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// HMemoryUtils.trashcanNow. Engine heap size: 10,519 MB. GUI used memory: 180 MB. Current time: 3/24/21, 10:17:10 AM CET
+// Device view-level: 0.0
+// [Engine Memory]: 10,519 MB (+1864kb) [00:07:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2226 ms.
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: PROJECT_DASHBOARD_GADGET_DELETE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: DESIGN_MODE_CHANGE
+// Tcl Message: open_checkpoint: Time (s): cpu = 00:06:46 ; elapsed = 00:06:43 . Memory (MB): peak = 15756.840 ; gain = 9059.496 ; free physical = 157117 ; free virtual = 401534 
+// OpenCheckpoint: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1/pfm_top_wrapper_routed.dcp elapsed time: 404.5s
+// Project name: project_pfm_top_wrapper_routed; location: /mnt/scratch/wenqi/FPGA-ANNS/PE_optimization/sort_reduction_network/sort_reduction_64_to_16_unfixed_scan_per_query_optimized_version3/_x.hw/vadd/link/vivado/vpl/prj/prj.runs/impl_1; part: xcu280-fsvh2892-2L-e
+dismissDialog("Open Checkpoint"); // bB (cr)
+// [Engine Memory]: 11,175 MB (+136304kb) [00:07:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  6712 ms.
+// Elapsed time: 13 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 11,622 MB. GUI used memory: 195 MB. Current time: 3/24/21, 10:17:29 AM CET
+// RouteApi::initDelayMediator elapsed time: 25.9s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 51s
+// Device view-level: 0.1
+// [Engine Memory]: 13,488 MB (+1838599kb) [00:07:44]
+// Elapsed time: 12 seconds
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_DESIGN_ANALYSIS, "Report Design Analysis..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_DESIGN_ANALYSIS
+// o (cr): Report Design Analysis: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  10502 ms.
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.F.construct(SourceFile:317)
+// 	at ui.frmwork.A.run(SourceFile:199)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: SyntheticaCleanerThread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1885)
+// Thread: Thread-1
+// Thread: Common-Cleaner
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/jdk.internal.ref.CleanerImpl.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// 	at java.base@9.0.4/jdk.internal.misc.InnocuousThread.run(Unknown Source)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Process Messages Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.d.h.construct(SourceFile:133)
+// 	at ui.frmwork.A.run(SourceFile:199)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Reference Handler
+// 	at java.base@9.0.4/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.Reference.processPendingReferences(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Reference.access$000(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+// Thread: AWT-Shutdown
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.Object.wait(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.AWTAutoShutdown.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Java2D Disposer
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.desktop@9.0.4/sun.java2d.Disposer.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.y.construct(SourceFile:2503)
+// 	at ui.frmwork.A.run(SourceFile:199)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.utils.lnf.b.run(SourceFile:100)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Batik CleanerThread
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: AWT-EventQueue-1
+// 	at java.desktop@9.0.4/sun.awt.X11.XlibWrapper.XSync(Native Method)
+// 	at java.desktop@9.0.4/sun.awt.X11.XErrorHandlerUtil.XSync(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XErrorHandlerUtil.WITH_XERROR_HANDLER(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XlibUtil.getWindowMapState(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.getScreenInsetsManually(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.getScreenInsets(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Window.init(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Window.<init>(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Window.<init>(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Dialog.<init>(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.JDialog.<init>(Unknown Source)
+// 	at ui.b.c.g.<init>(SourceFile:97)
+// 	at ui.b.c.g.<init>(SourceFile:85)
+// 	at ui.b.c.p.<init>(SourceFile:28)
+// 	at ui.b.j.a.<init>(SourceFile:71)
+// 	at ui.b.j.g.<init>(SourceFile:22)
+// 	at ui.b.j.o.dls(SourceFile:450)
+// 	at ui.b.j.o.dlg(SourceFile:338)
+// 	at ui.b.j.o.cJn(SourceFile:160)
+// 	at ui.b.j.o.init(SourceFile:120)
+// 	at ui.b.j.o.<init>(SourceFile:115)
+// 	at ui.views.c.cl.fEq(SourceFile:59)
+// 	at ui.views.c.cl.drG(SourceFile:54)
+// 	at ui.views.c.cl.run(SourceFile:44)
+// 	at ui.frmwork.a.epE(SourceFile:132)
+// 	at ui.frmwork.Y.erq(SourceFile:66)
+// 	at ui.aZ.actionPerformed(SourceFile:905)
+// 	at java.desktop@9.0.4/javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.AbstractButton.doClick(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.JComponent.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.processEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.processEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Window.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.access$500(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$3.run(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$3.run(Unknown Source)
+// 	at java.base@9.0.4/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$4.run(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$4.run(Unknown Source)
+// 	at java.base@9.0.4/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.dispatchEvent(Unknown Source)
+// 	at ui.frmwork.b.d.dispatchEvent(SourceFile:88)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.run(Unknown Source)
+// Thread: hw_ila_monitor
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.Object.wait(Unknown Source)
+// 	at java.base@9.0.4/java.util.TimerThread.mainLoop(Unknown Source)
+// 	at java.base@9.0.4/java.util.TimerThread.run(Unknown Source)
+// Thread: TimerQueue
+// 	at java.base@9.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@9.0.4/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.DelayQueue.take(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.TimerQueue.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@9.0.4/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@9.0.4/java.lang.Thread.getAllStackTraces(Unknown Source)
+// 	at ui.utils.d.c.eVM(SourceFile:486)
+// 	at ui.frmwork.b.e.construct(SourceFile:140)
+// 	at ui.frmwork.A.run(SourceFile:199)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: AWT-XAWT
+// 	at java.base@9.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@9.0.4/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.ReentrantLock.lock(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.SunToolkit.awtLock(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.run(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: main
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1058)
+// 	at ui.PlanAhead.jswMain(SourceFile:1101)
+// Thread: Attach Listener
+// Thread: Finalizer
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+// Elapsed time: 12 seconds
+selectCheckBox(PAResourceQtoS.ReportDesignAnalysisDialog_PERFORM_TIMING_PATHS_CHARACTERISTICS, "Timing", false); // g (p, o): FALSE
+selectCheckBox(PAResourceQtoS.ReportDesignAnalysisDialog_MINIMUM_CONGESTION_LEVEL, "Minimum congestion level:", true); // g (Q, o): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (o)
+// 'cl' command handler elapsed time: 18 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  3473 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3969 ms.
+dismissDialog("Report Design Analysis"); // o (cr)
+// bB (cr):  Report Design Analysis : addNotify
+// Tcl Message: report_design_analysis -congestion -min_congestion_level 5 -name design_analysis_1 
+// TclEventType: DESIGN_ANALYSIS_RESULT_GENERATED
+// [GUI Memory]: 245 MB (+2581kb) [00:08:24]
+// Tcl Message: report_design_analysis: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 19287.930 ; gain = 0.000 ; free physical = 154227 ; free virtual = 398644 
+// Elapsed time: 23 seconds
+dismissDialog("Report Design Analysis"); // bB (cr)
+// Elapsed time: 327 seconds
+selectTree(RDIResource.NavigableReportTab_REPORT_NAVIGATION_TREE, "[Report Contents, Congestion, Router Initial Congestion]", 4, false); // q (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 188 MB. Current time: 3/24/21, 10:47:32 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 11:17:32 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 11:47:32 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 12:17:32 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1786 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 12:47:33 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 1:17:33 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 1:47:33 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 2:17:33 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 13,485 MB. GUI used memory: 182 MB. Current time: 3/24/21, 2:47:34 PM CET
